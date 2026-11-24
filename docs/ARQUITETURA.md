@@ -1,6 +1,6 @@
-# Gettsum — Arquitetura
+# Letron — Arquitetura
 
-Gettsum transforma a câmera do smartphone em um leitor de código de barras para o computador:
+Letron transforma a câmera do smartphone em um leitor de código de barras para o computador:
 o celular decodifica o código e envia **apenas o texto** ao computador, que o insere no campo
 em foco como se tivesse sido digitado.
 
@@ -84,10 +84,10 @@ ecossistema (JavaScript) para manter e funcionamento idêntico em Android e iOS.
 4. **Inserção direta só no Windows** nesta versão. macOS/Linux: o valor vai para a área de
    transferência e o celular informa "Copiado — pressione Ctrl/Cmd+V". Não é apresentado como
    universal.
-5. Apps executados **como administrador** não aceitam teclas de um app comum (UIPI). O Gettsum
+5. Apps executados **como administrador** não aceitam teclas de um app comum (UIPI). O Letron
    detecta o caso e cai para a área de transferência, avisando o usuário.
 6. iOS: sem vibração (API indisponível no Safari); lanterna só aparece se o navegador a expuser.
-7. Não é possível saber, de forma universal, se o foco está **num campo de texto** — o Gettsum
+7. Não é possível saber, de forma universal, se o foco está **num campo de texto** — o Letron
    envia para a janela em primeiro plano e devolve ao celular o título dessa janela, para que o
    usuário confirme visualmente onde o valor entrou.
 
@@ -96,7 +96,7 @@ ecossistema (JavaScript) para manter e funcionamento idêntico em Android e iOS.
 ## 3. Fluxo entre smartphone, computador e formulário
 
 ```
- Smartphone (navegador)                Computador (Gettsum desktop)              Formulário
+ Smartphone (navegador)                Computador (Letron desktop)               Formulário
  ─────────────────────                 ─────────────────────────────              ──────────
                                        1. Inicia; gera certificado e
                                           servidor HTTPS :47800
@@ -140,11 +140,11 @@ ecossistema (JavaScript) para manter e funcionamento idêntico em Android e iOS.
 ## 4. Instalação, permissões e conectividade
 
 **Computador (Windows 10/11)**
-- Instalar o Gettsum (instalador NSIS ou versão portátil) — ou, em desenvolvimento, Node.js 20+.
+- Instalar o Letron (instalador NSIS ou versão portátil) — ou, em desenvolvimento, Node.js 20+.
 - Na primeira execução, o **Firewall do Windows** pergunta se o app pode aceitar conexões:
   permitir em **Redes privadas**. A rede Wi-Fi deve estar marcada como *Privada*.
 - Não precisa de privilégios de administrador. (Para inserir em apps executados como
-  administrador, o Gettsum também precisaria ser executado como administrador.)
+  administrador, o Letron também precisaria ser executado como administrador.)
 
 **Celular (Android 8+ com Chrome; iOS 15+ com Safari)**
 - Mesma rede Wi-Fi do computador.

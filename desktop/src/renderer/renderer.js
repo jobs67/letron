@@ -1,7 +1,7 @@
 'use strict';
 
 const $ = (id) => document.getElementById(id);
-const api = window.gettsum;
+const api = window.letron;
 let state = null;
 let renaming = false; // skip re-rendering the device list while a name is being edited
 
@@ -52,7 +52,7 @@ function render(s) {
     text = `Conectado: ${online.map((d) => d.name).join(', ')}`;
     tone = 'ok';
   } else {
-    text = s.devices.length ? 'Aguardando o celular abrir o Gettsum' : 'Aguardando pareamento';
+    text = s.devices.length ? 'Aguardando o celular abrir o Letron' : 'Aguardando pareamento';
     tone = 'idle';
   }
   status.dataset.tone = tone;

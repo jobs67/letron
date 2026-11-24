@@ -9,16 +9,16 @@ const user32 = koffi.load('user32.dll');
 const kernel32 = koffi.load('kernel32.dll');
 const advapi32 = koffi.load('advapi32.dll');
 
-const MOUSEINPUT = koffi.struct('GETTSUM_MOUSEINPUT', {
+const MOUSEINPUT = koffi.struct('LETRON_MOUSEINPUT', {
   dx: 'int32', dy: 'int32', mouseData: 'uint32', dwFlags: 'uint32', time: 'uint32', dwExtraInfo: 'uintptr_t',
 });
-const KEYBDINPUT = koffi.struct('GETTSUM_KEYBDINPUT', {
+const KEYBDINPUT = koffi.struct('LETRON_KEYBDINPUT', {
   wVk: 'uint16', wScan: 'uint16', dwFlags: 'uint32', time: 'uint32', dwExtraInfo: 'uintptr_t',
 });
-const HARDWAREINPUT = koffi.struct('GETTSUM_HARDWAREINPUT', {
+const HARDWAREINPUT = koffi.struct('LETRON_HARDWAREINPUT', {
   uMsg: 'uint32', wParamL: 'uint16', wParamH: 'uint16',
 });
-const INPUT = koffi.struct('GETTSUM_INPUT', {
+const INPUT = koffi.struct('LETRON_INPUT', {
   type: 'uint32',
   u: koffi.union({ mi: MOUSEINPUT, ki: KEYBDINPUT, hi: HARDWAREINPUT }),
 });

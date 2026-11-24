@@ -1,7 +1,7 @@
 param($out, $ms = 4000)
 Add-Type -AssemblyName System.Windows.Forms
 $f = New-Object System.Windows.Forms.Form
-$f.Text = 'GettsumTestForm'; $f.TopMost = $true; $f.StartPosition = 'CenterScreen'
+$f.Text = 'LetronTestForm'; $f.TopMost = $true; $f.StartPosition = 'CenterScreen'
 $t = New-Object System.Windows.Forms.TextBox; $t.Width = 300; $t.Text = 'AB||CD'
 $f.Controls.Add($t)
 $f.Add_Shown({ $f.Activate(); $t.Focus(); $t.SelectionStart = 3; $t.SelectionLength = 0 })

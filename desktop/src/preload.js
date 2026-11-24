@@ -2,7 +2,7 @@
 
 const { contextBridge, ipcRenderer } = require('electron');
 
-contextBridge.exposeInMainWorld('gettsum', {
+contextBridge.exposeInMainWorld('letron', {
   getState: () => ipcRenderer.invoke('state:get'),
   setSettings: (patch) => ipcRenderer.invoke('settings:set', patch),
   regeneratePairing: () => ipcRenderer.invoke('pairing:regenerate'),

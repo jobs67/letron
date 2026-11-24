@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Gettsum: o celular lê código de barras pela câmera (página web servida pelo próprio PC) e envia
+Letron: o celular lê código de barras pela câmera (página web servida pelo próprio PC) e envia
 só o texto, via HTTPS na rede local, para um app Electron no Windows que o digita no campo em
 foco. Visão de uso e API: [README.md](README.md). Manual do usuário: [docs/MANUAL.md](docs/MANUAL.md).
 Decisões e limitações: [docs/ARQUITETURA.md](docs/ARQUITETURA.md).
@@ -15,7 +15,7 @@ cd mobile  && npm install && npm run build   # esbuild → desktop/mobile-dist (
 cd desktop && npm install
 npm start          # build:mobile + electron .
 npm test           # node --test test/server.test.js (13 testes de integração)
-npm run test:e2e   # precisa de GETTSUM_URL e GETTSUM_CODE com o app rodando (ver README)
+npm run test:e2e   # precisa de LETRON_URL e LETRON_CODE com o app rodando (ver README)
 npm run dist       # instalador NSIS + portátil em desktop/dist
 ```
 
@@ -43,5 +43,5 @@ Não use `node --test test/` — pegaria os arquivos de `test/e2e`.
 - Os dois CSS têm `[hidden] { display: none !important; }` — não remover (regras `display:grid` sobrescreviam `hidden`).
 - Electron não suporta `prompt()`; usar edição inline.
 - koffi precisa ficar em `asarUnpack` no electron-builder.
-- O E2E digita na janela em primeiro plano; testes deixam dados em `%APPDATA%\gettsum-desktop\` e `%APPDATA%\phone-sim` — limpar depois.
+- O E2E digita na janela em primeiro plano; testes deixam dados em `%APPDATA%\letron-desktop\` e `%APPDATA%\phone-sim` — limpar depois.
 - Ainda não validado em celulares reais (aviso de certificado, Safari iOS, lanterna). Executável sem assinatura digital.

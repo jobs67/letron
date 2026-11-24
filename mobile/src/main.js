@@ -6,7 +6,7 @@ const $ = (id) => document.getElementById(id);
 
 // ---------- preferences ----------
 
-const PREFS_KEY = 'gettsum.prefs';
+const PREFS_KEY = 'letron.prefs';
 const DEFAULT_PREFS = {
   sound: true,
   vibration: true,

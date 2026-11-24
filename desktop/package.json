@@ -1,7 +1,7 @@
 {
-  "name": "gettsum-desktop",
+  "name": "letron-desktop",
   "version": "0.1.0",
-  "description": "Gettsum - recebe leituras de código de barras do celular e insere no campo ativo",
+  "description": "Letron - recebe leituras de código de barras do celular e insere no campo ativo",
   "main": "src/main.js",
   "private": true,
   "scripts": {
@@ -13,8 +13,8 @@
     "dist": "npm run build:mobile && electron-builder --win"
   },
   "build": {
-    "appId": "app.gettsum.desktop",
-    "productName": "Gettsum",
+    "appId": "app.letron.desktop",
+    "productName": "Letron",
     "files": [
       "src/**/*",
       "mobile-dist/**/*",

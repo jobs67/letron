@@ -1,6 +1,6 @@
-# Manual do usuário — Gettsum
+# Manual do usuário — Letron
 
-O Gettsum transforma a câmera do celular em um leitor de código de barras para o computador.
+O Letron transforma a câmera do celular em um leitor de código de barras para o computador.
 Você aponta o celular para o código, e o número aparece no campo em que o cursor está no
 computador, como se tivesse sido digitado.
 
@@ -29,7 +29,7 @@ computador, como se tivesse sido digitado.
 | Computador | Windows 10 ou 11 |
 | Celular | Android 8+ com Chrome, ou iPhone com Safari (iOS 15+). Câmera traseira funcionando. |
 | Rede | Computador e celular **na mesma rede Wi-Fi/local**. Não precisa de internet. |
-| Instalação no celular | Nenhuma. O Gettsum do celular abre no navegador. |
+| Instalação no celular | Nenhuma. O Letron do celular abre no navegador. |
 
 > Redes de visitantes ("Guest") e algumas redes corporativas isolam os aparelhos entre si. Nelas
 > o celular não enxerga o computador. Veja [Problemas comuns](#10-problemas-comuns).
@@ -40,20 +40,20 @@ computador, como se tivesse sido digitado.
 
 Há duas versões:
 
-- **`Gettsum Setup x.y.z.exe`**: instalador. Cria atalho no Menu Iniciar e permite iniciar com o
+- **`Letron Setup x.y.z.exe`**: instalador. Cria atalho no Menu Iniciar e permite iniciar com o
   Windows. Recomendado.
-- **`Gettsum x.y.z.exe`**: versão portátil. Não instala nada; basta executar.
+- **`Letron x.y.z.exe`**: versão portátil. Não instala nada; basta executar.
 
 Passo a passo:
 
 1. Execute o arquivo. Na primeira execução, o Windows pode mostrar **"O Windows protegeu o
    computador"** (SmartScreen), porque o programa ainda não tem assinatura digital. Clique em
    **Mais informações → Executar assim mesmo**.
-2. O Windows pergunta se o Gettsum pode se comunicar na rede. Marque **Redes privadas** e clique em
+2. O Windows pergunta se o Letron pode se comunicar na rede. Marque **Redes privadas** e clique em
    **Permitir acesso**.
    - Se você clicou em *Cancelar* por engano, veja
      [O celular não conecta](#o-celular-não-conecta-sem-conexão).
-3. A janela do Gettsum abre com um QR Code. O Gettsum também fica na **bandeja do sistema**, ao lado
+3. A janela do Letron abre com um QR Code. O Letron também fica na **bandeja do sistema**, ao lado
    do relógio (ícone verde quando há celular conectado, cinza quando não há).
 
 ---
@@ -64,7 +64,7 @@ O pareamento autoriza aquele celular a enviar leituras para este computador. Ele
 vez só; depois o celular reconecta sozinho.
 
 1. Conecte o celular **ao mesmo Wi-Fi** do computador.
-2. Abra a **câmera do celular** (ou um leitor de QR) e aponte para o QR Code da janela do Gettsum.
+2. Abra a **câmera do celular** (ou um leitor de QR) e aponte para o QR Code da janela do Letron.
    Toque no link que aparecer.
 3. **Aviso de segurança, só na primeira vez.** O navegador mostra "Sua conexão não é
    particular" ou "Esta conexão não é privada". Isso é esperado: a conexão é criptografada, mas o
@@ -79,7 +79,7 @@ verde: **"Conectado: <nome do celular>"**.
 
 ### Sem conseguir ler o QR Code
 
-Abaixo do QR Code o Gettsum mostra um endereço (ex.: `https://192.168.0.10:47800`) e um código
+Abaixo do QR Code o Letron mostra um endereço (ex.: `https://192.168.0.10:47800`) e um código
 de 6 números.
 
 1. No navegador do celular, digite o endereço **exatamente** como aparece, incluindo `https://`
@@ -90,9 +90,9 @@ de 6 números.
 O código vale por **5 minutos** e só pode ser usado **uma vez**. O tempo restante aparece abaixo
 do QR Code. Se expirar, clique em **Gerar novo código**.
 
-### Deixar o Gettsum como "app" no celular (recomendado)
+### Deixar o Letron como "app" no celular (recomendado)
 
-Depois de pareado, adicione o Gettsum à tela inicial para abri-lo com um toque:
+Depois de pareado, adicione o Letron à tela inicial para abri-lo com um toque:
 
 - **Android (Chrome):** menu **⋮ → Adicionar à tela inicial** (ou **Instalar app**).
 - **iPhone (Safari):** botão **Compartilhar → Adicionar à Tela de Início**.
@@ -101,8 +101,8 @@ Depois de pareado, adicione o Gettsum à tela inicial para abri-lo com um toque:
 
 ## 4. Ler códigos no dia a dia
 
-1. Deixe o Gettsum aberto no computador (pode estar só na bandeja).
-2. Abra o Gettsum no celular (ícone na tela inicial ou o mesmo endereço). Ele reconecta sozinho.
+1. Deixe o Letron aberto no computador (pode estar só na bandeja).
+2. Abra o Letron no celular (ícone na tela inicial ou o mesmo endereço). Ele reconecta sozinho.
 3. **No computador, clique no campo onde o código deve entrar.** Pode ser uma planilha, um
    sistema de estoque, um site, o Bloco de Notas, etc.
 4. Aponte o celular para o código de barras, deixando-o dentro do retângulo branco.
@@ -111,8 +111,8 @@ Depois de pareado, adicione o Gettsum à tela inicial para abri-lo com um toque:
 6. Para o próximo código, posicione o cursor no próximo campo (ou use o sufixo *Tab*/*Enter*, veja a
    [seção 7](#7-configurações-recomendadas-por-situação)) e leia de novo.
 
-**Importante:** o Gettsum digita na **janela que está em primeiro plano** no computador. Se a
-própria janela do Gettsum estiver em foco, ele recusa e pede para clicar no campo do formulário.
+**Importante:** o Letron digita na **janela que está em primeiro plano** no computador. Se a
+própria janela do Letron estiver em foco, ele recusa e pede para clicar no campo do formulário.
 Confira sempre o nome da janela mostrado no celular.
 
 ### Proteção contra leitura duplicada
@@ -169,12 +169,12 @@ Tipos opcionais: **QR Code**, **Code 39**, **ITF (Interleaved 2 of 5)** e **Data
 
 | Área | O que mostra / faz |
 |---|---|
-| **Indicador do topo** | *Aguardando pareamento*, *Aguardando o celular abrir o Gettsum*, *Conectado: <celular>*, *Recepção pausada* ou *Servidor parado*. |
+| **Indicador do topo** | *Aguardando pareamento*, *Aguardando o celular abrir o Letron*, *Conectado: <celular>*, *Recepção pausada* ou *Servidor parado*. |
 | **Conectar um celular** | QR Code, endereço, código de 6 números e tempo de validade. **Gerar novo código** invalida o anterior. Se o computador tiver mais de uma rede, aparece **Endereço usado no QR Code** para escolher a correta (normalmente a do Wi-Fi). |
 | **Celulares pareados** | Lista com status (Conectado / Visto há X min). **Renomear** e **Remover**. |
 | **Inserção** | Como inserir o valor, tecla após o valor e **Pausar recepção** (ver [seção 7](#7-configurações-recomendadas-por-situação)). |
 | **Preferências** | Nome do computador, ocultar valores no histórico, iniciar com o Windows, manter na bandeja ao fechar, porta de rede. |
-| **Últimas leituras** | Hora, celular, valor e resultado (*Inserido*, *Copiado*, *Pausado*, *Erro*) das últimas 20 leituras. Fica só na memória e some ao fechar o Gettsum. |
+| **Últimas leituras** | Hora, celular, valor e resultado (*Inserido*, *Copiado*, *Pausado*, *Erro*) das últimas 20 leituras. Fica só na memória e some ao fechar o Letron. |
 
 ### Ícone na bandeja
 
@@ -182,7 +182,7 @@ Clique com o botão direito no ícone ao lado do relógio para ver:
 
 - **Abrir**: mostra a janela;
 - **Pausar recepção / Retomar recepção**;
-- **Sair**: encerra o Gettsum. Com a opção *Ao fechar, manter na bandeja* ligada, fechar a
+- **Sair**: encerra o Letron. Com a opção *Ao fechar, manter na bandeja* ligada, fechar a
   janela no **X** apenas a esconde.
 
 ---
@@ -194,7 +194,7 @@ Clique com o botão direito no ícone ao lado do relógio para ver:
 | Opção | Quando usar |
 |---|---|
 | **Digitar no campo ativo** *(recomendado)* | A maioria dos programas: Excel, navegadores, ERPs, Bloco de Notas. Não mexe na área de transferência. |
-| **Colar no campo ativo (Ctrl+V)** | Programas que ignoram digitação simulada: acesso remoto (RDP, Citrix, AnyDesk), alguns sistemas legados e terminais. O Gettsum restaura o que estava na área de transferência logo depois. |
+| **Colar no campo ativo (Ctrl+V)** | Programas que ignoram digitação simulada: acesso remoto (RDP, Citrix, AnyDesk), alguns sistemas legados e terminais. O Letron restaura o que estava na área de transferência logo depois. |
 | **Somente copiar** | Quando você quer decidir onde colar. O valor vai para a área de transferência e você cola com **Ctrl+V**. |
 
 ### "Depois do valor, pressionar"
@@ -242,10 +242,10 @@ Clique com o botão direito no ícone ao lado do relógio para ver:
 |---|---|---|
 | ✓ Inserido em “…” | Deu certo. | Confira se o nome da janela é o esperado. |
 | Copiado para a área de transferência do computador — cole com Ctrl+V | O valor não foi digitado, mas está pronto para colar. | Clique no campo no computador e pressione **Ctrl+V**. |
-| “…” é executado como administrador e não aceita digitação de outros apps | O programa de destino roda com privilégios elevados (restrição do Windows). | Cole com Ctrl+V, ou feche o Gettsum e abra-o com **Executar como administrador**. |
-| A janela do Gettsum está em foco | O cursor estava na própria janela do Gettsum. | Clique no campo do formulário e toque em **Tentar novamente**. |
+| “…” é executado como administrador e não aceita digitação de outros apps | O programa de destino roda com privilégios elevados (restrição do Windows). | Cole com Ctrl+V, ou feche o Letron e abra-o com **Executar como administrador**. |
+| A janela do Letron está em foco | O cursor estava na própria janela do Letron. | Clique no campo do formulário e toque em **Tentar novamente**. |
 | Nenhuma janela ativa no computador | Nenhum programa em primeiro plano (ex.: área de trabalho). | Clique no campo do formulário e tente de novo. |
-| Recepção pausada no computador | Alguém pausou no computador. | Desmarque **Pausar recepção** no Gettsum ou use *Retomar recepção* na bandeja. |
+| Recepção pausada no computador | Alguém pausou no computador. | Desmarque **Pausar recepção** no Letron ou use *Retomar recepção* na bandeja. |
 | Não foi possível confirmar o envio… o valor não será digitado duas vezes | A rede falhou no meio do envio. | Toque em **Tentar novamente**. Se o valor já tinha chegado, ele não é repetido. |
 | Sem conexão — tentando de novo… | O celular não alcança o computador. | Veja [O celular não conecta](#o-celular-não-conecta-sem-conexão). |
 | Código inválido ou expirado | O código de 6 números está errado ou passou de 5 minutos. | Confira o código no computador ou clique em **Gerar novo código**. |
@@ -269,7 +269,7 @@ Clique com o botão direito no ícone ao lado do relógio para ver:
 
 Verifique, nesta ordem:
 
-1. **O Gettsum está aberto no computador?** Procure o ícone na bandeja (talvez escondido na seta
+1. **O Letron está aberto no computador?** Procure o ícone na bandeja (talvez escondido na seta
    **^** ao lado do relógio).
 2. **Mesmo Wi-Fi?** Confira o nome da rede nos dois aparelhos. Desligue os **dados móveis** do
    celular se ele insistir em sair por eles.
@@ -277,7 +277,7 @@ Verifique, nesta ordem:
    ou peça ao TI para liberar a porta **47800** (TCP) na rede local.
 4. **Firewall do Windows:** abra *Configurações → Privacidade e segurança → Segurança do
    Windows → Firewall e proteção de rede → Permitir um aplicativo pelo firewall* e marque
-   **Gettsum** em **Privada**. Confira também se a rede do Windows está como **Privada**
+   **Letron** em **Privada**. Confira também se a rede do Windows está como **Privada**
    (*Configurações → Rede e Internet → Wi-Fi/Ethernet → Tipo de perfil de rede*).
 5. **Endereço errado:** se o computador tem cabo e Wi-Fi, ou VPN, escolha a rede certa em
    **Endereço usado no QR Code** e leia o QR Code de novo.
@@ -311,7 +311,7 @@ Verifique, nesta ordem:
 
 ### Aparecem caracteres trocados ou a mais
 
-- O Gettsum remove quebras de linha, tabulações e caracteres de controle do código lido. Enter/Tab
+- O Letron remove quebras de linha, tabulações e caracteres de controle do código lido. Enter/Tab
   só são enviados pela opção **Depois do valor, pressionar**.
 - Se o programa de destino tiver autocompletar, ele pode alterar o texto digitado. Teste no
   Bloco de Notas para comparar.
@@ -345,7 +345,7 @@ ano). Aceite novamente como no [passo 3](#3-conectar-o-celular-primeira-vez).
   único) e é bloqueado após 5 tentativas erradas.
 - Você pode **remover** um celular a qualquer momento, com efeito imediato.
 - As leituras **não são gravadas em disco**. O histórico fica só na memória e some ao fechar o
-  Gettsum. Ative **Ocultar valores no histórico** se outras pessoas veem sua tela.
+  Letron. Ative **Ocultar valores no histórico** se outras pessoas veem sua tela.
 
 ---
 
@@ -358,12 +358,12 @@ Sim. Só precisa da rede local (Wi-Fi/roteador) ligando os dois aparelhos.
 Nesta versão, a digitação automática é só para Windows. Em outros sistemas o valor é copiado para
 a área de transferência e você cola com Ctrl/Cmd+V.
 
-**Preciso deixar a janela do Gettsum aberta?**
+**Preciso deixar a janela do Letron aberta?**
 Não. Ele pode ficar só na bandeja. Ative **Iniciar com o Windows** para não precisar abrir
 manualmente.
 
 **A tela do celular pode apagar?**
-Se apagar, a câmera para. Ao reabrir, o Gettsum reconecta e volta a ler.
+Se apagar, a câmera para. Ao reabrir, o Letron reconecta e volta a ler.
 
 **Posso usar dois celulares ao mesmo tempo?**
 Sim. As leituras entram no computador na ordem em que chegam.

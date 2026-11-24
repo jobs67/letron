@@ -130,10 +130,10 @@ function updateTray() {
     : online.length
       ? `Conectado: ${online.map((d) => d.name).join(', ')}`
       : 'Aguardando celular';
-  tray.setToolTip(`Gettsum — ${status}`);
+  tray.setToolTip(`Letron — ${status}`);
   tray.setContextMenu(
     Menu.buildFromTemplate([
-      { label: `Gettsum — ${status}`, enabled: false },
+      { label: `Letron — ${status}`, enabled: false },
       { type: 'separator' },
       { label: 'Abrir', click: showWindow },
       {
@@ -161,7 +161,7 @@ function createWindow() {
     height: 720,
     minWidth: 720,
     minHeight: 560,
-    title: 'Gettsum',
+    title: 'Letron',
     icon: path.join(ASSETS, 'icon.png'),
     autoHideMenuBar: true,
     backgroundColor: '#0f172a',
@@ -258,16 +258,16 @@ async function startServer() {
       onEvent: (type, payload) => {
         if (type === 'paired') {
           notice = null;
-          notify('Gettsum', `Celular pareado: ${payload.name}`);
+          notify('Letron', `Celular pareado: ${payload.name}`);
         }
-        if (type === 'pairing-locked') notify('Gettsum', 'Muitas tentativas de pareamento inválidas. Um novo código foi gerado.');
+        if (type === 'pairing-locked') notify('Letron', 'Muitas tentativas de pareamento inválidas. Um novo código foi gerado.');
         pushState();
       },
     });
     const port = await server.listen(s.port);
     serverState = { listening: true, error: null, port };
   } catch (err) {
-    console.error('[gettsum] servidor:', err);
+    console.error('[letron] servidor:', err);
     const busy = err.code === 'EADDRINUSE';
     serverState = {
       listening: false,
@@ -321,7 +321,7 @@ app.on('window-all-closed', () => {
 });
 
 app.whenReady().then(async () => {
-  app.setAppUserModelId('app.gettsum.desktop');
+  app.setAppUserModelId('app.letron.desktop');
   const dataDir = app.getPath('userData');
   settings = new JsonStore(path.join(dataDir, 'settings.json'), SETTINGS_DEFAULTS);
   devices = new DeviceRegistry(new JsonStore(path.join(dataDir, 'devices.json'), { devices: [] }));

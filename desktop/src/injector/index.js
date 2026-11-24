@@ -46,7 +46,7 @@ function createInjector({ clipboard, ownPid = process.pid, native = loadNative()
       return { status: 'error', target: null, message: 'Nenhuma janela ativa no computador. Clique no campo do formulário.' };
     }
     if (target.pid === ownPid) {
-      return { status: 'error', target: target.title, message: 'A janela do Gettsum está em foco. Clique no campo do formulário e tente novamente.' };
+      return { status: 'error', target: target.title, message: 'A janela do Letron está em foco. Clique no campo do formulário e tente novamente.' };
     }
     if (target.blockedByUipi) {
       return copyOnly(text, `"${target.title}" é executado como administrador e não aceita digitação de outros apps.`);

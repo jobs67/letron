@@ -1,6 +1,6 @@
-// HTTP client for the Gettsum desktop that served this page (same origin).
+// HTTP client for the Letron desktop that served this page (same origin).
 
-const AUTH_KEY = 'gettsum.auth';
+const AUTH_KEY = 'letron.auth';
 
 export class UnauthorizedError extends Error {}
 export class NetworkError extends Error {}

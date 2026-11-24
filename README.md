@@ -1,7 +1,7 @@
-# Gettsum
+# Letron
 
 Use a câmera do celular como leitor de código de barras do computador. O celular lê o código,
-envia **apenas o texto** pela rede local e o Gettsum o insere no campo em foco, na posição do
+envia **apenas o texto** pela rede local e o Letron o insere no campo em foco, na posição do
 cursor, como se tivesse sido digitado.
 
 - **Computador:** app Windows (Electron) com ícone na bandeja.
@@ -14,7 +14,7 @@ situação, mensagens de erro e solução de problemas): **[docs/MANUAL.md](docs
 Arquitetura, alternativas avaliadas, limitações e escopo: [docs/ARQUITETURA.md](docs/ARQUITETURA.md).
 
 ```
-gettsum/
+letron/
 ├─ desktop/              App do computador (Electron)
 │  ├─ src/main.js        Processo principal: bandeja, janela, IPC, inicialização
 │  ├─ src/server.js      Servidor HTTPS: API + interface móvel
@@ -38,9 +38,9 @@ gettsum/
 Resumo para começar. Detalhes, receitas por tipo de tarefa e solução de problemas estão no
 [manual](docs/MANUAL.md).
 
-1. Abra o **Gettsum** no computador. Na primeira vez, o Windows pergunta se o app pode usar a
+1. Abra o **Letron** no computador. Na primeira vez, o Windows pergunta se o app pode usar a
    rede: marque **Redes privadas** e clique em **Permitir**.
-2. Com o celular **no mesmo Wi-Fi**, aponte a câmera para o QR Code exibido pelo Gettsum.
+2. Com o celular **no mesmo Wi-Fi**, aponte a câmera para o QR Code exibido pelo Letron.
 3. Na primeira vez, o navegador do celular avisa que a conexão "não é particular". Isso é
    esperado, porque o certificado é gerado pelo seu próprio computador e não por uma autoridade
    pública. Toque em **Avançado → Continuar para…** (Android) ou **Mostrar detalhes → visitar
@@ -53,7 +53,7 @@ Resumo para começar. Detalhes, receitas por tipo de tarefa e solução de probl
 Sem QR Code: abra no navegador do celular o endereço exibido (ex.: `https://192.168.0.10:47800`)
 e digite o código de 6 dígitos.
 
-**Dica:** no celular, use "Adicionar à tela inicial" para abrir o Gettsum como um app.
+**Dica:** no celular, use "Adicionar à tela inicial" para abrir o Letron como um app.
 
 ### Configurações
 
@@ -84,9 +84,9 @@ Mais combinações estão em [Configurações recomendadas por situação](docs/
 
 O indicador no topo do celular fica vermelho ("Sem conexão — tentando de novo…") e ele tenta
 reconectar sozinho. Verifique se:
-- o Gettsum está aberto no computador (ícone na bandeja);
+- o Letron está aberto no computador (ícone na bandeja);
 - os dois aparelhos estão no mesmo Wi-Fi (redes de visitantes costumam isolar os aparelhos);
-- a rede do Windows está como **Privada** e o firewall permite o Gettsum.
+- a rede do Windows está como **Privada** e o firewall permite o Letron.
 
 Se o IP do computador mudar, leia o QR Code de novo. Para evitar isso, configure uma reserva
 de DHCP no roteador.
@@ -96,11 +96,11 @@ de DHCP no roteador.
 - **Inserção direta só no Windows** nesta versão. Em macOS/Linux, o valor vai para a área de
   transferência e o celular avisa para colar com Ctrl/Cmd+V.
 - Programas **executados como administrador** não aceitam digitação de apps comuns (UIPI do
-  Windows). O Gettsum detecta o caso, copia o valor e avisa. Para digitar nesses programas,
-  execute o Gettsum também como administrador.
+  Windows). O Letron detecta o caso, copia o valor e avisa. Para digitar nesses programas,
+  execute o Letron também como administrador.
 - Alguns programas (acesso remoto/Citrix, jogos, terminais legados) ignoram a digitação
   simulada. Use o modo **Colar (Ctrl+V)**.
-- O Gettsum digita na **janela em primeiro plano**; não é possível saber, em todo programa, se o
+- O Letron digita na **janela em primeiro plano**; não é possível saber, em todo programa, se o
   foco está num campo de texto. Por isso o celular mostra o nome da janela que recebeu o valor.
 - Caracteres de controle (quebras de linha, tabulações, separadores GS1) são removidos da
   leitura. Enter/Tab só são enviados pela opção de sufixo.
@@ -126,14 +126,14 @@ npm test           # integração do servidor: pareamento, autenticação, idemp
 ```
 
 **E2E (celular simulado):** abre um Chromium com **câmera falsa** exibindo um EAN-13, pareia
-com o Gettsum em execução, abre um formulário WinForms em foco e confere o texto inserido, a
+com o Letron em execução, abre um formulário WinForms em foco e confere o texto inserido, a
 anti-duplicata e o "Repetir último".
 
 ```powershell
 cd desktop
 npm start                                   # em outro terminal; anote o código de 6 dígitos
-$env:GETTSUM_URL  = "https://127.0.0.1:47800"
-$env:GETTSUM_CODE = "123456"                # código exibido no Gettsum
+$env:LETRON_URL  = "https://127.0.0.1:47800"
+$env:LETRON_CODE = "123456"                # código exibido no Letron
 npm run test:e2e
 # esperado: FORM TEXT: "AB|78912345678957891234567895|CD"  (1 leitura + 1 repetição)
 ```
@@ -144,7 +144,7 @@ Não clique em outras janelas durante o E2E: o texto vai para a janela em primei
 
 ```bash
 cd desktop
-npm run dist       # gera dist/Gettsum Setup x.y.z.exe (instalador) e dist/Gettsum x.y.z.exe (portátil)
+npm run dist       # gera dist/Letron Setup x.y.z.exe (instalador) e dist/Letron x.y.z.exe (portátil)
 ```
 
 O ícone do executável, do instalador e da janela vem de `desktop/build/icon.ico` e
@@ -157,7 +157,7 @@ mostra um aviso na primeira execução.
 
 ### Onde ficam os dados
 
-`%APPDATA%\gettsum-desktop\`:
+`%APPDATA%\letron-desktop\`:
 - `settings.json`: configurações;
 - `devices.json`: celulares pareados (nome e **hash** do segredo);
 - `tls.json`: certificado e chave privada do servidor local.

@@ -35,7 +35,7 @@ async function ensureCertificate(dir, { hostname, ips }) {
   const allIps = [...new Set([...(stored?.ips || []), ...ips, '127.0.0.1'])];
   const notBefore = new Date(Date.now() - 60 * 1000);
   const notAfter = new Date(notBefore.getTime() + VALIDITY_DAYS * 24 * 3600 * 1000);
-  const pems = await selfsigned.generate([{ name: 'commonName', value: `Gettsum ${hostname}` }], {
+  const pems = await selfsigned.generate([{ name: 'commonName', value: `Letron ${hostname}` }], {
     keySize: 2048,
     algorithm: 'sha256',
     notBeforeDate: notBefore,

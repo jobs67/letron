@@ -14,7 +14,7 @@ const { DeviceRegistry } = require('../src/devices');
 const { ScanProcessor, sanitize } = require('../src/scan-processor');
 const { createServer } = require('../src/server');
 
-const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'gettsum-test-'));
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'letron-test-'));
 const staticDir = path.join(tmp, 'static');
 fs.mkdirSync(staticDir);
 fs.writeFileSync(path.join(staticDir, 'index.html'), '<!doctype html><title>ok</title>');

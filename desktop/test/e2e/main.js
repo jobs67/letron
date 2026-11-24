@@ -2,9 +2,9 @@
 const { app, BrowserWindow, session } = require('electron');
 const { spawn } = require('child_process');
 const fs = require('fs'); const path = require('path');
-const origin = process.env.GETTSUM_URL || 'https://127.0.0.1:47800';
-const code = process.env.GETTSUM_CODE;
-const y4m = process.env.GETTSUM_Y4M || path.join(__dirname, 'ean.y4m');
+const origin = process.env.LETRON_URL || 'https://127.0.0.1:47800';
+const code = process.env.LETRON_CODE;
+const y4m = process.env.LETRON_Y4M || path.join(__dirname, 'ean.y4m');
 const formPs1 = path.join(__dirname, 'test-form.ps1');
 const outFile = path.join(__dirname, 'form-out.txt');
 app.commandLine.appendSwitch('use-fake-device-for-media-stream');
